@@ -17,8 +17,8 @@ Entrambe le pagine condividono header e footer.
 
 ![mockup](http://prontoproit.github.io/FrontendTest/img/mockup1.png)
 
-Nella sezione centrale c'è un campo con autocomplete le cui voci sono caricate attraverso una chiamata ajax secondo lo standard jsonp all'indirizzo:  
-`http://prontoproit.github.io/FrontendTest/autocomplete?callback=jsonpCallback`
+Nella sezione centrale c'è un campo con autocomplete le cui voci sono caricate attraverso una chiamata ajax all'indirizzo:  
+`https://prontopro.getsandbox.com/autocomplete`
 
 L'oggetto ritornato è nella forma:
 
@@ -33,7 +33,7 @@ L'oggetto ritornato è nella forma:
 
 In cui `<label>` è l'etichetta della suggestion da mostrare nell'autocomplete e `<url>` è l'indirizzo da cui ottenere le specifiche del form da renderizzare.
 
-Al momento della selezione di una tipologia di form dall'autocomplete bisogna renderizzarlo ottenendo le specifiche con una chiamata ajax secondo lo standard jsonp all'url ottenuto allo step precedente.
+Al momento della selezione di una tipologia di form dall'autocomplete bisogna renderizzarlo ottenendo le specifiche con una chiamata ajax all'url ottenuto allo step precedente.
 
 L'oggetto ritornato è nella forma:
 
@@ -54,7 +54,7 @@ L'oggetto ritornato è nella forma:
 ]
 ```
 
-(vedere [form1](http://prontoproit.github.io/FrontendTest/form1), [form2](http://prontoproit.github.io/FrontendTest/form2), [form3](http://prontoproit.github.io/FrontendTest/form3) per riferimento ai possibili valori)
+(vedere [form0](https://prontopro.getsandbox.com/form/0), [form1](https://prontopro.getsandbox.com/form/1), [form2](https://prontopro.getsandbox.com/form/2) per riferimento ai possibili valori)
 
 ![mockup](http://prontoproit.github.io/FrontendTest/img/mockup2.png)
 
