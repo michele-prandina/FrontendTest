@@ -88,5 +88,5 @@ Inoltre verranno considerate le scelte fatte:
 
 ## Modalità di consegna
 
-Effettuare una fork di questa repository, realizzare le pagine richieste e, a compito eseguito, iniziare una pull request.
-
+Effettuare una fork di questa repository, realizzare le pagine richieste e, a compito eseguito, iniziare una pull request.  
+Inoltre scrivere una semplice nota (o come messaggio sulla PR o rimpiazzando questo README) sulla struttura del progetto, su come eseguirlo ed eventuali info utili.
