@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/michele-prandina/FrontendTest/issues"
   },
-  "homepage": "https://github.com/michele-prandina/FrontendTest#readme"
+  "homepage": "https://github.com/michele-prandina/FrontendTest#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
