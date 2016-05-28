@@ -2,6 +2,7 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
@@ -15,6 +16,7 @@
 
 // Import components
 @import 'components/header';
+@import 'components/header-banner';
 @import 'components/footer';
 @import 'components/buttons';
 
