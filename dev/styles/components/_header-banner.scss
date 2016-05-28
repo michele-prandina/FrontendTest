@@ -1,0 +1,12 @@
+@include small-phone {
+  .banner-header {
+    background-color: $banner-bg-color;
+    padding: 24px 0;
+    margin-top: 24px;
+
+    .banner-header-title {
+      color: $banner-text-color;
+      margin: 0;
+    }
+  }
+}
