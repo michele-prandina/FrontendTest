@@ -6,3 +6,6 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
 
+// Import custom variables
+@import 'variables';
+@import 'mediaquery-mx';
