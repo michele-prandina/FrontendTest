@@ -8,9 +8,6 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 
 // In order to sync the browser with our workflow
 var browserSync = require('browser-sync');
-
-//
-var wiredep = require('wiredep');
 var del = require('del');
 
 
@@ -41,7 +38,37 @@ gulp.task('scripts', function() {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('html', ['styles', 'scripts'], function() {
+    return gulp.src('dev/*.html')
+        .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
+        .pipe(plugin.if('*.js', plugin.uglify()))
+        .pipe(plugin.if('*.css', plugin.cssnano()))
+        .pipe(plugin.if('*.html', plugin.htmlmin({collapseWhitespace: true})))
+        .pipe(gulp.dest('dist'));
+});
+
+function lint(files, options) {
+    return function() {
+        return gulp.src(files)
+            .pipe(reload({stream: true, once: true}))
+            .pipe(plugin.eslint(options))
+            .pipe(plugin.eslint.format())
+            .pipe(plugin.if(!browserSync.active, plugin.eslint.failAfterError()));
+    };
+}
+
+gulp.task('lint', lint('dev/scripts/**/*.js'));
+
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+
+gulp.task('extras', () => {
+  return gulp.src([
+    'dev/*.*',
+    '!dev/*.html'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist'));
+});
 
 gulp.task('serve', ['styles', 'scripts'], function() {
     browserSync({
@@ -65,7 +92,7 @@ gulp.task('serve', ['styles', 'scripts'], function() {
     gulp.watch('dev/scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['lint', 'html'], function() {
+gulp.task('build', ['lint', 'html', 'extras'], function() {
     return gulp.src('dist/**/*').pipe(plugin.size({title: 'build', gzip: true}));
 });
 
