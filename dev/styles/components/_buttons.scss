@@ -1,0 +1,32 @@
+// Overwrite some .btn bootstrap's class rules
+.btn {
+  padding: $btn-padding;
+  border-radius: 2px;
+  font-weight: normal;
+}
+
+// Modifier for .btn class
+.btn--menu {
+  background-color: $btn-menu-bgcolor;
+  color: $btn-menu-color;
+  border-color: $btn-menu-bordercolor;
+  border-width: 0 0 3px;
+  border-bottom: 2px solid $btn-menu-bordercolor;;
+
+  &:hover {
+    color: $btn-color;
+    background-color: $btn-menu-bgcolor-focus;
+    transition: 260ms;
+  }
+
+  &:focus {
+    color: $btn-color;
+    background-color: $btn-menu-bgcolor-focus;
+    transition: 260ms;
+  }
+
+  &:active {
+    background-color: $btn-menu-bgcolor-active;
+    transition: 260ms;
+  }
+}

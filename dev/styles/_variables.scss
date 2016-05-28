@@ -18,6 +18,16 @@ $logo-height: 32px;
 $link-color_default: #337ab7;
 
 
+// --- BUTTONS
+$btn-color: #fff;
+$btn-padding: 5px 8px;
+$btn-menu-bgcolor: #4c7389;
+$btn-menu-color: #fff;
+$btn-menu-bordercolor:  darken($btn-menu-bgcolor, 20%);
+$btn-menu-bgcolor-focus: lighten($btn-menu-bgcolor, 5%);
+$btn-menu-bgcolor-active: darken($btn-menu-bgcolor, 10%);
+
+
 // --- FOOTER
 $footer-bg_color: #4a4a4a;
 $footer-menu-title-color: #fff;
