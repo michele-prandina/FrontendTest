@@ -14,6 +14,7 @@ var del = require('del');
 var plugin = gulpLoadPlugins();
 var reload = browserSync.reload;
 
+// Define task to manipulate  styles
 gulp.task('styles', function() {
     return gulp.src('dev/styles/*.scss')
         .pipe(plugin.plumber())
@@ -29,6 +30,7 @@ gulp.task('styles', function() {
         .pipe(reload({stream: true}));
 });
 
+// Define task to manipulate  scripts
 gulp.task('scripts', function() {
     return gulp.src('dev/scripts/**/*.js')
         .pipe(plugin.plumber())
@@ -38,15 +40,17 @@ gulp.task('scripts', function() {
         .pipe(reload({stream: true}));
 });
 
+// Define task to manipulate  Html when building
 gulp.task('html', ['styles', 'scripts'], function() {
     return gulp.src('dev/*.html')
-        .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
+        .pipe(plugin.useref({searchPath: ['.tmp', 'app', '.']}))
         .pipe(plugin.if('*.js', plugin.uglify()))
         .pipe(plugin.if('*.css', plugin.cssnano()))
         .pipe(plugin.if('*.html', plugin.htmlmin({collapseWhitespace: true})))
         .pipe(gulp.dest('dist'));
 });
 
+// Define function to make lint works
 function lint(files, options) {
     return function() {
         return gulp.src(files)
@@ -57,18 +61,12 @@ function lint(files, options) {
     };
 }
 
+// Define task lint to lint out js files
 gulp.task('lint', lint('dev/scripts/**/*.js'));
 
+// Define task Clean remove build and .tmp
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('extras', () => {
-  return gulp.src([
-    'dev/*.*',
-    '!dev/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
-});
 
 gulp.task('serve', ['styles', 'scripts'], function() {
     browserSync({
@@ -92,7 +90,7 @@ gulp.task('serve', ['styles', 'scripts'], function() {
     gulp.watch('dev/scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['lint', 'html', 'extras'], function() {
+gulp.task('build', ['lint', 'html'], function() {
     return gulp.src('dist/**/*').pipe(plugin.size({title: 'build', gzip: true}));
 });
 
