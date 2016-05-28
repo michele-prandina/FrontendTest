@@ -1,0 +1,23 @@
+{
+  "name": "prontopro-frontend-test",
+  "description": "Frontend test for prontopro",
+  "main": "",
+  "authors": [
+    "Michele Prandina"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "prontopro",
+    "test",
+    "frontend"
+  ],
+  "homepage": "https://github.com/michele-prandina/FrontendTest",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
