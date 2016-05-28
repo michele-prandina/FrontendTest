@@ -1,0 +1,26 @@
+// Variables for ProntoPro
+
+// --- FONTS
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+$font-default: 'Open Sans', sans-serif;
+
+
+// --- GENERAL LAYOUT
+$default-font_size: rem(16);
+$default-line_height: 1.6;
+$font-smooth-color: rgba(0, 0, 0, .004);
+$default-letter-spacing: .017em;
+
+
+// --- HEADER
+$header-padding_top: 10px;
+$logo-height: 32px;
+$link-color_default: #337ab7;
+
+
+// --- RESPONSIVE UTILS
+$small-smartphone-widht: 320px;
+$large-smartphone-width: 480px;
+$small-tablet-width: 768px;
+$large-tablet-width: 991px;
+$desktop-width: 1024px;

@@ -1,0 +1,72 @@
+// --- Mobile first
+
+@include small-phone {
+
+  // --- HEADER rules
+  .header {
+    padding-top: $header-padding-top;
+  }
+
+  // --- LOGO rules
+  .logo {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    .logo-container {
+      display: inline-block;
+      width: 100%;
+      position: inherit;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      .logo-image {
+        width: auto;
+        height: $logo-height;
+      }
+
+      .logo-description {
+        // Hack to remove the content from page in complain with google algorithm penalization.
+        position: absolute;
+        top: -99999;
+        left: -99999;
+        // End hack
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  // MENU rules
+  .menu {
+    //float: right;
+    width: 100%;
+    margin: 15px 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    .menu-item {
+      display: inline-block;
+      margin-left: 15px;
+
+      .menu-item-link {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .menu-item-link--deactivated {
+        color: darken($link-color_default, 33%);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+

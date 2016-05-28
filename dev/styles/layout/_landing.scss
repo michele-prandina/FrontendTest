@@ -1,0 +1,23 @@
+@include small-phone {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-default;
+    font-size: $default-font_size;
+    line-height: $default-line_height;
+    letter-spacing:$default-letter-spacing;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px $font-smooth-color;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
