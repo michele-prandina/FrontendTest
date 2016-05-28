@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "prontopro-frontend-test",
+  "version": "1.0.0",
+  "description": "Frontend test for prontopro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michele-prandina/FrontendTest.git"
+  },
+  "keywords": [
+    "prontopro",
+    "test",
+    "frontend"
+  ],
+  "author": "Michele Prandina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michele-prandina/FrontendTest/issues"
+  },
+  "homepage": "https://github.com/michele-prandina/FrontendTest#readme"
+}
