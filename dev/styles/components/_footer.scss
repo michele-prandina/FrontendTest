@@ -20,14 +20,18 @@
       .footer-menu-item {
 
         a {
-          color: $footer-menu-title-item;
+          color: $footer-menu-item-color;
           display: block;
           padding: 10px 0;
-          border-bottom: thin solid darken($footer-menu-title-item, 25%);
+          border-bottom: thin solid darken($footer-menu-item-color, 25%);
         }
       }
 
-
+    .footer-img {
+      width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
 
     .copyright {
       color: #fff;
@@ -44,11 +48,35 @@
     display: block;
 
     a {
-      color: $footer-menu-title-item;
+      color: $footer-menu-item-color;
       display: block;
       padding: 10px 0;
       border-bottom: none;
     }
   }
 
+  .copyright {
+    text-align: left;
+  }
+
+  .footer-img {
+    width: 80%;
+    margin: 0;
+    display: block;
+  }
+
+}
+
+@include large-tablet {
+  .footer-menu-item {
+
+    a {
+      transition: 180ms;
+
+      &:hover{
+        color: $footer-menu-item-color-hover;
+        transition: 180ms;
+      }
+    }
+  }
 }

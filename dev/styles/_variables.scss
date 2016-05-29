@@ -51,8 +51,9 @@ $btn-menu-bgcolor-active: darken($btn-menu-bgcolor, 10%);
 // --- FOOTER
 $footer-bg_color: #4a4a4a;
 $footer-menu-title-color: #fff;
-$footer-menu-title-item: #bcbcbc;
+$footer-menu-item-color: #bcbcbc;
 $footer-menu-title-style: uppercase;
+$footer-menu-item-color-hover: lighten($footer-menu-item-color, 50%);
 
 
 // --- RESPONSIVE UTILS
