@@ -1,28 +1,48 @@
-@media screen and (min-width: 320px) {
+@include small-phone {
 
   .footer {
     background-color: $footer-bg_color;
+    margin-top: 24px;
     padding: 36px 0;
   }
 
-  .footer-menu {
-    list-style: none;
-    margin: 0 0 24px;
-
-
-    .footer-menu-title {
-      color: $footer-menu-title-color;
-      text-transform: $footer-menu-title-style;
-      font-size: 14px;
+    .footer-menu {
+      list-style: none;
+      margin: 0 0 24px;
     }
 
-    .footer-menu-item {
-      a {
-        color: $footer-menu-title-item;
-        display: block;
-        padding: 10px 0;
-        border-bottom: thin solid darken($footer-menu-title-item, 25%);
+      .footer-menu-title {
+        color: $footer-menu-title-color;
+        text-transform: $footer-menu-title-style;
+        font-size: 14px;
       }
+
+      .footer-menu-item {
+        a {
+          color: $footer-menu-title-item;
+          display: block;
+          padding: 10px 0;
+          border-bottom: thin solid darken($footer-menu-title-item, 25%);
+        }
+      }
+
+    .copyright {
+      color: #fff;
+    }
+    .green-line {
+      display: block;
+      margin-top: 24px;
+    }
+}
+
+@include small-tablet {
+
+  .footer-menu-item {
+    a {
+      color: $footer-menu-title-item;
+      display: block;
+      padding: 10px 0;
+      border-bottom: none;
     }
   }
 
