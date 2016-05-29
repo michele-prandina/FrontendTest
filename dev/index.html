@@ -26,7 +26,7 @@
                 <h1 class="logo-container">
                     <img class="logo-image" src="images/logo.png" alt="ProntoPro logo" width="640" height="129">
                     <!-- .logo-description is hidden by the browser but still read by Google without any penalization -->
-                    <p class="logo-description">ProntoPro - TROVIAMO IL PROFESSIONISTA CHE STAI CERCANDO</p>
+                    <span class="logo-description">ProntoPro - TROVIAMO IL PROFESSIONISTA CHE STAI CERCANDO</span>
                 </h1>
             </a>
             <!-- LOGO ENDS -->
@@ -55,7 +55,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h2 class="banner-header-title">ProntoPro, <br> ne parlano tutti!</h2>
+                    <h2 class="banner-header-title pull-left text-center">ProntoPro, <br> ne parlano tutti!</h2>
+                    <img class="banner-header-image" src="images/prontopro-parlano.png" scrset="images/prontopro-parlano.png 1x, images/prontopro-parlano@2x.png 2x" height="64" width="auto" alt="Di ProntoPro ne parlano davvero tutti!">
                 </div>
             </div>
         </div>
@@ -65,20 +66,20 @@
     <div class="nav-tabs container-fluid">
         <div class="row">
             <div class="nav-tab-item col-xs-6">
-                <a class="nav-tab-item-anchor nav-tab-item-anchor--yellow" href="#">Dicono di noi</a>
+                <a class="nav-tab-item-anchor nav-tab-item-anchor--yellow" href="#quotes">Dicono di noi</a>
             </div>
             <div class="nav-tab-item col-xs-6">
-                <a class="nav-tab-item-anchor nav-tab-item-anchor--blue" href="#">Press</a>
+                <a class="nav-tab-item-anchor nav-tab-item-anchor--blue" href="#press">Press</a>
             </div>
         </div>
     </div>
     <!-- TABS END -->
 
     <!-- QUOTES START -->
-    <div class="quotes">
+    <div id="quotes" class="quotes">
         <div class="container">
             <!-- Single quote starts -->
-            <div class="quote-item row">
+            <div class="quote-item row animated animated--300ms fadeInUp">
                 <div class="col-md-12">
                     <ul class="quote-item-brands">
                         <li class="quote-item-brand">
@@ -90,7 +91,7 @@
             </div>
 
             <!-- Single quote starts -->
-            <div class="quote-item row">
+            <div class="quote-item row animated animated--600ms fadeInUp">
                 <div class="col-md-12">
                     <ul class="quote-item-brands">
                         <li class="quote-item-brand">
@@ -105,7 +106,7 @@
             </div>
 
             <!-- Single quote starts -->
-            <div class="quote-item row">
+            <div class="quote-item row  animated animated--900ms fadeInUp">
                 <div class="col-md-12">
                     <ul class="quote-item-brands">
                         <li class="quote-item-brand">
@@ -134,7 +135,7 @@
     <!-- ADS ENDS -->
 
     <!-- MAIN PRESS STARTS -->
-    <main class="press container" role="main">
+    <main id="press" class="press container" role="main">
 
         <!-- Press single row -->
         <article class="press-single row">
@@ -148,7 +149,7 @@
                         </time>
 
                         <div class="press-single-brand pull-left">
-                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png x2">
+                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png 2x">
                         </div>
                     </div>
                     <div class="press-single-right col-xs-12 col-md-8">
@@ -201,7 +202,7 @@
                         </time>
 
                         <div class="press-single-brand pull-left">
-                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png x2">
+                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png 2x">
                         </div>
                     </div>
                     <div class="press-single-right col-xs-12 col-md-8">
@@ -225,7 +226,7 @@
                         </time>
 
                         <div class="press-single-brand pull-left">
-                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png x2">
+                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png 2x">
                         </div>
                     </div>
                     <div class="press-single-right col-xs-12 col-md-8">
@@ -249,7 +250,7 @@
                         </time>
 
                         <div class="press-single-brand pull-left">
-                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png x2">
+                            <img class="press-single-brand-image img-responsive" src="images/logo-wired.png" srcset="images/logo-wired.png 1x, images/logo-wired@2x.png 2x">
                         </div>
                     </div>
                     <div class="press-single-right col-xs-12 col-md-8">
@@ -350,6 +351,10 @@
     </footer>
     <!-- FOOTER ENDS -->
 
+    <!-- build:js scripts/vendor.js -->
+    <script src="../bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
