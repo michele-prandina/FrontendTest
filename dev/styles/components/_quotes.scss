@@ -1,13 +1,13 @@
 @include small-phone {
   .quotes {
-    min-height: 500px;
     background-image: url('../images/quotes-bg.jpg');
     background-size: cover;
     background-position: center center;
+    padding: 36px 0;
 
     .quote-item {
       background-color: rgba(255, 255, 255, .8);
-      margin: 16px 0;
+      margin: 16px -15px; // Maintains -15px margin of bootstrap row
 
       .quote-item-brands {
         list-style: none;
