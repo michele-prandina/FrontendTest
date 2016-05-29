@@ -1,0 +1,27 @@
+@include small-phone {
+  .quotes {
+    min-height: 500px;
+    background-image: url('../images/quotes-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    .quote-item {
+      background-color: rgba(255, 255, 255, .8);
+      margin: 16px 0;
+
+      .quote-item-brands {
+        list-style: none;
+        padding: 0;
+
+        .quote-item-brand {
+          display: inline-block;
+          margin-right: 15px;
+        }
+      }
+
+      .quote-item-content {
+
+      }
+    }
+  }
+}
