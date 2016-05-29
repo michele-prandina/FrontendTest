@@ -27,23 +27,35 @@ gulp.task('styles', function() {
         .pipe(plugin.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
         .pipe(plugin.sourcemaps.write())
         .pipe(gulp.dest('.tmp/styles'))
+        .pipe(gulp.dest('dist/styles'))
         .pipe(reload({stream: true}));
 });
 
-// Define task to manipulate  scripts
+// Define task to manipulate scripts
 gulp.task('scripts', function() {
     return gulp.src('dev/scripts/**/*.js')
         .pipe(plugin.plumber())
         .pipe(plugin.sourcemaps.init())
         .pipe(plugin.sourcemaps.write('.'))
         .pipe(gulp.dest('.tmp/scripts'))
+        .pipe(gulp.dest('dist/scripts'))
         .pipe(reload({stream: true}));
+});
+
+// Define task to manipulate images
+gulp.task('images', function() {
+  return gulp.src('dev/images/**/*')
+    .on('error', function (err) {
+      console.log(err);
+      this.end();
+    })
+    .pipe(gulp.dest('dist/images'));
 });
 
 // Define task to manipulate  Html when building
 gulp.task('html', ['styles', 'scripts'], function() {
     return gulp.src('dev/*.html')
-        .pipe(plugin.useref({searchPath: ['.tmp', 'app', '.']}))
+        .pipe(plugin.useref({searchPath: ['.tmp', 'dev', '.']}))
         .pipe(plugin.if('*.js', plugin.uglify()))
         .pipe(plugin.if('*.css', plugin.cssnano()))
         .pipe(plugin.if('*.html', plugin.htmlmin({collapseWhitespace: true})))
@@ -56,6 +68,11 @@ function lint(files, options) {
         return gulp.src(files)
             .pipe(reload({stream: true, once: true}))
             .pipe(plugin.eslint(options))
+            .pipe(plugin.eslint({
+                globals: {
+                    'jQuery': true
+                }
+            }))
             .pipe(plugin.eslint.format())
             .pipe(plugin.if(!browserSync.active, plugin.eslint.failAfterError()));
     };
@@ -90,7 +107,7 @@ gulp.task('serve', ['styles', 'scripts'], function() {
     gulp.watch('dev/scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['lint', 'html'], function() {
+gulp.task('build', ['lint', 'html', 'styles', 'scripts', 'images'], function() {
     return gulp.src('dist/**/*').pipe(plugin.size({title: 'build', gzip: true}));
 });
 
