@@ -41,6 +41,10 @@
   }
 
   // MENU rules
+  .main-navigation {
+    float: none;
+  }
+
   .menu {
     //float: right;
     width: 100%;
@@ -70,3 +74,18 @@
   }
 }
 
+
+@include small-tablet {
+  .logo {
+    width: auto;
+  }
+
+  .main-navigation {
+    width: auto;
+    float: right;
+  }
+
+  .menu {
+
+  }
+}
