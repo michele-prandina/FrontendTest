@@ -1,0 +1,103 @@
+/*
+*   Add animations
+*   Code reference is: https://github.com/daneden/animate.css
+*   This file gets only the interested parts
+*/
+
+
+// --- Initializes animations default
+.animated {
+  //-webkit-animation-duration: 1s;
+  //animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// --- Modifiers for animations duration by Michele Prandina
+
+.animated--100ms {
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+
+.animated--150ms {
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+}
+
+.animated--200ms {
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+
+.animated--300ms {
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
+
+.animated--400ms {
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+
+
+.animated--500ms {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}
+
+.animated--600ms {
+   -webkit-animation-duration: 600ms;
+   animation-duration: 600ms;
+ }
+
+.animated--700ms {
+  -webkit-animation-duration: 700ms;
+  animation-duration: 700ms;
+}
+
+.animated--800ms {
+  -webkit-animation-duration: 800ms;
+  animation-duration: 800ms;
+}
+
+.animated--900ms {
+  -webkit-animation-duration: 900ms;
+  animation-duration: 900ms;
+}
+
+
+// --- Defines fadeInUp Animation
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+// --- Calls fadeInUp animation
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
