@@ -38,6 +38,11 @@ $ads-font-color: #6b6b6b;
 // --- PRESS
 $press-bg-color: #EBF5F9;
 
+
+// --- PAGINATION
+$pagination-bg-color: #f5f5f5;
+$pagination-anchor-bg-color-hover: darken($pagination-bg-color, 10%);
+
 // --- BUTTONS
 $btn-color: #fff;
 $btn-padding: 5px 8px;
