@@ -3,10 +3,36 @@
     background-color: $banner-bg-color;
     padding: 24px 0;
     margin-top: 24px;
-
-    .banner-header-title {
-      color: $banner-text-color;
-      margin: 0;
-    }
   }
+    .banner-header-title {
+      margin: 0;
+      color: $banner-text-color;
+      text-align: center;
+      widht: 100%;
+    }
+  
+    .banner-header-image {
+      display: block;
+      height: 54px;
+      width: auto;
+      margin: 16px auto 0;
+    }
+}
+
+@include small-tablet {
+
+  .banner-header-title {
+    text-align: left;
+    float: left;
+    position: relative;
+  }
+
+  .banner-header-image {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 150px;
+  }
+  
+  
 }

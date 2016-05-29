@@ -29,6 +29,7 @@
 
       .logo-description {
         // Hack to remove the content from page in complain with google algorithm penalization.
+        display: block;
         position: absolute;
         top: -99999;
         left: -99999;
