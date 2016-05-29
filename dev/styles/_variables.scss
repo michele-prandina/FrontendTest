@@ -26,6 +26,8 @@ $banner-text-color: #fff;
 // --- NAV TABS
 $nav-tabs-bg-yellow: #D3C82E;
 $nav-tabs-bg-blue: #5B707E;
+$nav-tabs-bg-yellow-hover: darken($nav-tabs-bg-yellow, 7%);
+$nav-tabs-bg-blue-hover: darken($nav-tabs-bg-blue, 10%);
 $nav-tabs-color-yellow: $nav-tabs-bg-blue;
 $nav-tabs-color-blue: #fff;
 

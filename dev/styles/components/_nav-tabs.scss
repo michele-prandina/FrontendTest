@@ -1,29 +1,46 @@
 @include small-phone {
+  .nav-tab-item {
 
-  .nav-tabs {
-    .nav-tab-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-      padding-left: 0;
-      padding-right: 0;
+    .nav-tab-item-anchor {
+      width: 100%;
+      padding: 14px 0;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
 
-      .nav-tab-item-anchor {
-        width: 100%;
-        padding: 14px 0;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
+    .nav-tab-item-anchor--yellow{
+      background-color: $nav-tabs-bg-yellow;
+      color: $nav-tabs-color-yellow;
+    }
 
-      .nav-tab-item-anchor--yellow{
-        background-color: $nav-tabs-bg-yellow;
-        color: $nav-tabs-color-yellow;
-      }
+    .nav-tab-item-anchor--blue{
+      background-color: $nav-tabs-bg-blue;
+      color: $nav-tabs-color-blue;
+    }
+}
 
-      .nav-tab-item-anchor--blue{
-        background-color: $nav-tabs-bg-blue;
-        color: $nav-tabs-color-blue;
-      }
+
+@include large-tablet {
+
+  .nav-tab-item-anchor--yellow{
+    &:hover{
+      background-color: $nav-tabs-bg-yellow-hover;
+      color: $nav-tabs-color-yellow;
+      transition: 180ms;
+    }
+  }
+
+  .nav-tab-item-anchor--blue{
+    &:hover{
+      background-color: $nav-tabs-bg-blue-hover;
+      color: $nav-tabs-color-blue;
+      transition: 180ms;
     }
   }
 
