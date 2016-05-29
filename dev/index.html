@@ -274,15 +274,15 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <ul class="pagination">
-                    <li class="pagination-to-first">
-                        <a class="pagination-anchor" href="#">&laquo;</a>
+                    <li class="pagination-item">
+                        <a class="pagination-anchor pagination-anchor--to-first" href="#">&laquo;</a>
                     </li>
-                    <li class="pagination-back-one">
-                        <a class="pagination-anchor" href="#">&lt;</a>
+                    <li class="pagination-item">
+                        <a class="pagination-anchor pagination-anchor--back-one" href="#">&lt;</a>
                     </li>
 
-                    <li class="pagination-current">
-                        <span class="pagination-anchor">1</span>
+                    <li class="pagination-item">
+                        <span class="pagination-anchor pagination-anchor--current">1</span>
                     </li>
                     <li class="pagination-item">
                         <a class="pagination-anchor" href="#">2</a>
@@ -290,10 +290,12 @@
                     <li class="pagination-item">
                         <a class="pagination-anchor" href="#">3</a>
                     </li>
-                    <li class="pagination-item">
+
+                    <!-- In mobile hide from 4 up -->
+                    <li class="pagination-item hidden-xs">
                         <a class="pagination-anchor" href="#">4</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item hidden-xs">
                         <a class="pagination-anchor" href="#">5</a>
                     </li>
 
@@ -301,11 +303,11 @@
                         <a class="pagination-anchor" href="#">...</a>
                     </li>
 
-                    <li class="pagination-next-one">
-                        <a class="pagination-anchor" href="#">&gt;</a>
+                    <li class="pagination-item">
+                        <a class="pagination-anchor pagination-anchor--next-one" href="#">&gt;</a>
                     </li>
-                    <li class="pagination-to-last">
-                        <a class="pagination-anchor" href="#">&raquo;</a>
+                    <li class="pagination-item">
+                        <a class="pagination-anchor pagination-anchor--to-last" href="#">&raquo;</a>
                     </li>
                 </ul>
             </div>
