@@ -53,7 +53,7 @@ gulp.task('images', function() {
 });
 
 // Define task to manipulate  Html when building
-gulp.task('html', ['styles', 'scripts'], function() {
+gulp.task('html', ['styles', 'scripts', 'images'], function() {
     return gulp.src('dev/*.html')
         .pipe(plugin.useref({searchPath: ['.tmp', 'dev', '.']}))
         .pipe(plugin.if('*.js', plugin.uglify()))
@@ -107,7 +107,7 @@ gulp.task('serve', ['styles', 'scripts'], function() {
     gulp.watch('dev/scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('build', ['lint', 'html', 'styles', 'scripts', 'images'], function() {
+gulp.task('build', ['lint', 'html'], function() {
     return gulp.src('dist/**/*').pipe(plugin.size({title: 'build', gzip: true}));
 });
 
