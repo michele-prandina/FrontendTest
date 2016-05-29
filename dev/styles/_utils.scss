@@ -1,0 +1,26 @@
+// General utilities that doesn't need to be encapsulated inside a module
+.text-center {
+  text-align: center;
+}
+
+.video {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-16x9 {
+  padding-bottom: 56.25%;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.green{
+  color: green;
+}
