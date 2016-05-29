@@ -16,8 +16,28 @@
       .pagination-anchor {
         min-width: 10px;
         min-height: 10px;
-        padding: 10px 15px;
+        padding: 10px 10px;
         background-color: #f5f5f5;
       }
+
+}
+
+@include medium-phone {
+
+  .pagination-anchor {
+    min-width: 10px;
+    min-height: 10px;
+    padding: 10px 15px;
+  }
+
+}
+
+@include large-phone {
+
+  .pagination-anchor {
+    min-width: 10px;
+    min-height: 10px;
+    padding: 10px 18px;
+  }
 
 }

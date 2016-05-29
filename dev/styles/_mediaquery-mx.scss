@@ -5,6 +5,12 @@
   }
 }
 
+@mixin medium-phone {
+  @media (min-width: #{$medium-smartphone-width}) {
+    @content;
+  }
+}
+
 @mixin large-phone {
   @media (min-width: #{$large-smartphone-width}) {
     @content;
