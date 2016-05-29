@@ -58,6 +58,25 @@
           margin-bottom: 0;
         }
 
+        .video {
+          margin-top: 22px;
+        }
+
       }
+
+}
+
+@include large-tablet {
+  .press-single-left {
+    border-right: 3px solid #fff;
+  }
+
+  .press-single-right {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+}
+
+@include desktop {
 
 }
