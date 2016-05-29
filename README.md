@@ -1,92 +1,94 @@
-# Test Frontend
+#### Struttura del progetto "Pagina statica"
 
-![Logo ProntoPro.it](https://www.prontopro.it/bundles/prontoprofrontend/img/logo.png)
+**OUTPUT FINALE PAGINA STATICA `dist/`**
 
-## Istruzioni
+La pagina è direttamente disponibile per visione aprendo il file `index.html` presente nella cartella [dist/](https://github.com/michele-prandina/FrontendTest/tree/master/dist).
 
-Il test consiste nella ralizzazione di due pagine:
-- Una dinamica con forms, chiamate ajax e manipolazione del DOM.
-- Una statica per la realizzazione di un mockup dettagliato.
+**NB.** 
+In questa cartella, la pagina html e i file Css sono stati minimizzati. 
+Gli script in ECMAScrip5 sono stati concatenati (vendor.js), minificati e "uglified".
 
-Le pagine devono essere realizzate secondo standards e best practices, con decente compatibilità cross-browser e in modo adatto alla fruizione su dispositivi mobili.
 
-Entrambe le pagine condividono header e footer.
-![header](http://prontoproit.github.io/FrontendTest/img/header.png) ![footer](http://prontoproit.github.io/FrontendTest/img/footer.png)
+----------
 
-### Pagina Dinamica
+**FILE DEV `dev/`**
 
-![mockup](http://prontoproit.github.io/FrontendTest/img/mockup1.png)
+In questa cartella è possibile avere la visione dei file realizzati per ottenere l' ouput  nella cartella sopra descritta.
 
-Nella sezione centrale c'è un campo con autocomplete le cui voci sono caricate attraverso una chiamata ajax all'indirizzo:  
-`https://www.prontopro.it/work-with-us/dev/fe/test/autocomplete`
+Utilizza `gulp.js` per automatizzare le task e `bower.js` per le dipendenze.
 
-L'oggetto ritornato è nella forma:
 
-```
-[
-  {
-    "label": <label>,
-    "url": <url>
-  }, ...
-]
-```
+In particolare le librerie utilizzate sono state le seguenti.
 
-In cui `<label>` è l'etichetta della suggestion da mostrare nell'autocomplete e `<url>` è l'indirizzo da cui ottenere le specifiche del form da renderizzare.
+**Gulp:**
 
-Al momento della selezione di una tipologia di form dall'autocomplete bisogna renderizzarlo ottenendo le specifiche con una chiamata ajax all'url ottenuto allo step precedente.
+> "browser-sync": "^2.12.10",
+    "del": "^1.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^0.13.2",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^3.0.0",
+    "jshint": "^2.9.2",
+    "useref": "^1.2.0",
+    "wiredep": "^4.0.0"
 
-L'oggetto ritornato è nella forma:
 
-```
-[
-  {
-    "name": <name>,
-    "label": <label>,
-    "type": <type>,
-    "rules": [
-      {
-        "type": <rule_type>,
-        "msg": <error_message>,
-        "options": <optional_parameters>
-      }, ...
-    ]
-  }, ...
-]
-```
+**Bower:**
 
-(vedere [form0](https://www.prontopro.it/work-with-us/dev/fe/test/form/0), [form1](https://www.prontopro.it/work-with-us/dev/fe/test/form/1), [form2](https://www.prontopro.it/work-with-us/dev/fe/test/form/2) per riferimento ai possibili valori)
+> "html5shiv": "^3.7.3",
+    "bootstrap-sass": "^3.3.6",
+    "lodash": "^4.13.1"
 
-![mockup](http://prontoproit.github.io/FrontendTest/img/mockup2.png)
 
-Quando viene cliccato il bottone di submit deve essere effettuata la validazione secondo le regole espresse in `rules`, mostrando eventuali messaggi di errore.
+----------
 
-Se il form passa la validazione i valori devono essere visualizzati nella colonna di destra. 
+#### Anteprima live dei file di progetto
 
-Bonus:
-- Possibilità di eliminare una delle precedenti submission.
-- Possibilità di ricaricare i dati di una submission passata cliccandoci sopra.
+Per ottenere una live-preview di questi assets è necessario avere installato `node js` e `npm`.
 
-### Pagina statica
 
-Realizzare la pagina del seguente mockup:
+**Installare le dipendenze necessarie:**
 
-![mockup](http://prontoproit.github.io/FrontendTest/img/static.png)
+    npm install && bower install
 
-## Valutazione
+**Servire l'ambiente di stage in locale:**
 
-I primari oggetti di valutazione sono:
-- Completezza rispetto alle specifiche.
-- Organizzazione, pulizia e stile.
+    gulp serve
+    
+Utilizzando la libreria browser-sync è possibile accedere sotto la stessa connessione (WI-FI) tramite più dispositivi (Cellulari, tablet e più computer) tramite live-sync.  
 
-Inoltre verranno considerate le scelte fatte:
-- Uso di un preprocessore (JS e/o CSS).
-- Uso di librerie e frameworks (JS e/o CSS).
-- Automatizzazione del processo di build.
-- Eventuale integrazione di meccanismi di testing e/o linting.
 
-(Dove ritenuto opportuno motivare le scelte effettuate)
+#### Linting
+Sono state utilizzate librerie per i suggerimenti di correzione tramite gulp, per ECMAScript5 e SASS.
 
-## Modalità di consegna
+#### Note - Project, CSS & JavaScript Styles Guides
 
-Effettuare una fork di questa repository, realizzare le pagine richieste e, a compito eseguito, iniziare una pull request.  
-Inoltre scrivere una semplice nota (o come messaggio sulla PR o rimpiazzando questo README) sulla struttura del progetto, su come eseguirlo ed eventuali info utili.
+Per i file SASS ho fatto riferimento al CSS style guide di trello (Ref: [https://github.com/trello/trellisheets/blob/master/styleguide.md](https://github.com/trello/trellisheets/blob/master/styleguide.md)) ed usato Bootstrap.
+
+Per ECMAScript 5 (JavaScript)  non segue una particolare linea guida di sviluppo. 
+
+il file `gulpfile.js` è una versione più leggera e semplificata di quello creato dal generatore YEOMAN "Generatr WebApp" (ref: [https://github.com/yeoman/generator-webapp](https://github.com/yeoman/generator-webapp)). 
+
+La struttura di progetto prende spunto in modo incisivo dal generatore sopra riportato, che per questo caso è stato semplificato e creato da zero (Nessun generatore yeaoman è stato utilizzato per questo progetto :) ).
+
+
+#### Debug & Cross browser tests
+E' stata utilizzata tramite bower la libreria `html5shiv` per gestire la retro compatibilità con i browser legacy di IE (ref: [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)).
+
+Il progetto è realizzato mediante principio mobile-first (media queries incrementali). 
+
+I vari test cross-browser sono stati realizzati su:
+
+ - Chrome Canary (Mac OS)
+ - Chrome (Mac OS, iOS e Android)
+ - Safari (Mac OS, iOS)
