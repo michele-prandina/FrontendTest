@@ -9,6 +9,7 @@
     var theDocument = $("html, body");
     var navTabItemAnchor = $(".nav-tab-item-anchor");
 
+    // Add click event
     navTabItemAnchor.on("click", function(evnt) {
 
         // Prevent default scroll
@@ -21,10 +22,6 @@
         theDocument.animate({
             scrollTop: elemAttr.offset().top
         }, 320);
-
-
     });
-
-
 
 })(jQuery);
