@@ -1,0 +1,63 @@
+@include small-phone {
+
+  .press-single {
+    margin-top: 15px;
+  }
+
+    .press-single-left, .press-single-right {
+      background-color: $press-bg-color;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+      .press-single-info-date {
+        display: inline-block;
+      }
+
+      .press-single-info-date {
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        padding-top: 16px;
+        padding-right: 15px;
+        padding-bottom: 16px;
+        border-right: 3px solid #fff;
+
+        span{
+          display: block;
+        }
+
+        .press-single-month, .press-single-year {
+          font-size: 10px;
+        }
+        .press-single-day {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+    .press-single-brand {
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .press-single-brand-image {
+      margin: 5px 0 0 15px;
+    }
+  }
+
+    .press-single-right {
+
+    }
+
+      .press-single-content {
+        padding-bottom: 15px;
+
+        p{
+          margin-bottom: 0;
+        }
+
+      }
+
+}
