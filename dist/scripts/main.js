@@ -1,0 +1,1 @@
+!function(t){"use strict";var a=t("html, body"),e=t(".nav-tab-item-anchor");e.on("click",function(e){e.preventDefault();var n=t(this),o=t(n.attr("href"));a.animate({scrollTop:o.offset().top},320)})}(jQuery);
