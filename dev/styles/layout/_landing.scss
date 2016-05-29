@@ -1,3 +1,4 @@
+// --- Layout for Landing rules
 @include small-phone {
   body {
     margin: 0;
@@ -19,11 +20,6 @@
     &:focus, &:active, &:hover {
       text-decoration: none;
     }
-  }
-
-  .img-responsive {
-    width: 100%;
-    height: auto;
   }
 }
 

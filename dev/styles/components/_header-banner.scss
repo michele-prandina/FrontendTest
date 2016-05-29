@@ -1,4 +1,7 @@
+// --- Header banners rules Mobile first
+
 @include small-phone {
+
   .banner-header {
     background-color: $banner-bg-color;
     padding: 24px 0;
@@ -17,6 +20,7 @@
       width: auto;
       margin: 16px auto 0;
     }
+
 }
 
 @include small-tablet {
@@ -33,6 +37,4 @@
     top: 0;
     left: 150px;
   }
-  
-  
 }

@@ -1,3 +1,6 @@
+// --- Nav tabs rules Mobile first
+
+
 @include small-phone {
   .nav-tab-item {
 
@@ -22,6 +25,10 @@
     .nav-tab-item-anchor--blue{
       background-color: $nav-tabs-bg-blue;
       color: $nav-tabs-color-blue;
+
+      &:hover, &:focus, &:active {
+        color: $nav-tabs-color-blue;
+      }
     }
 }
 
@@ -29,7 +36,7 @@
 @include large-tablet {
 
   .nav-tab-item-anchor--yellow{
-    &:hover{
+    &:hover, &:focus, &:active{
       background-color: $nav-tabs-bg-yellow-hover;
       color: $nav-tabs-color-yellow;
       transition: 180ms;
@@ -37,7 +44,7 @@
   }
 
   .nav-tab-item-anchor--blue{
-    &:hover{
+    &:hover, &:focus, &:active{
       background-color: $nav-tabs-bg-blue-hover;
       color: $nav-tabs-color-blue;
       transition: 180ms;
